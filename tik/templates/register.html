@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+    <body class="container justify-content-around">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+    <form class="m-5" method="POST" action='register'>
+      {% csrf_token %}
+     {% comment %} <div class="jus justify-content-between mr-auto">
+        <div class="form-group row">
+          <label for="f_name" class="col-sm-2 col-form-label">First name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="First name" name="f_name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="l_name" class="col-sm-2 col-form-label">Last name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control"  placeholder="Last name" name="l_name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="u_name" class="col-sm-2 col-form-label">User name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="User name" name="u_name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" placeholder="example@gmail.com" name="email">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="pass1" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" placeholder="password" name="pass1">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="pass2" class="col-sm-2 col-form-label">Re-Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" placeholder="password" name="pass2">
+          </div>
+        </div>
+        <input type="submit" class="btn btn-info ml-5 mt-2 " value="Register"><br>
+     </div> {% endcomment %}
+
+     <input type="text" name="f_name" placeholder="first name"> <br>
+     <input type="text" name="l_name" placeholder="last name"> <br>
+     <input type="email" name="email" placeholder="email"><br>
+     <input type="text" name="u_name" placeholder="User name"><br>
+     <input type="password" name="password1" placeholder="password"><br>
+     <input type="password" name="password2" placeholder="password"><br>
+     <input type="submit">
+    </form>
+
+    </body>
+{% endblock content %}
